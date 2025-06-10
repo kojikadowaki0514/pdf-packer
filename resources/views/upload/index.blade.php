@@ -29,5 +29,9 @@
         <br><br>
         <button type="submit">アップロード</button>
     </form>
+    <br>
+    <form action="{{ route('upload.list') }}" method="GET">
+        <button type="submit">アップロード済ファイル一覧を見る</button>
+    </form>
 </body>
 </html>

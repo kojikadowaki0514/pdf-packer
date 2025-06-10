@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/upload', [UploadController::class, 'index'])->name('upload.index');
     Route::post('/upload', [UploadController::class, 'store'])->name('upload.store');
+    Route::get('/uploads/list', [UploadController::class, 'list'])->name('upload.list');
 });
 
 require __DIR__.'/auth.php';
