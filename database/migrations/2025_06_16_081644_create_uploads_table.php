@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('uploads', function (Blueprint $table) {
             $table->id();
-            $table->string('file_name'); // 元のファイル名
-            $table->string('stored_name'); // 保存されたファイル名
+            $table->string('original_filename');
+            $table->string('saved_filename');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
