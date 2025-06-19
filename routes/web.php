@@ -19,9 +19,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/upload', [UploadController::class, 'index'])->name('upload.index');
-    Route::post('/upload', [UploadController::class, 'store'])->name('upload.store');
-    Route::get('/uploads/list', [UploadController::class, 'list'])->name('upload.list');
+    Route::get('/uploads/create', [UploadController::class, 'create'])->name('uploads.create');
+    Route::post('/uploads/store', [UploadController::class, 'store'])->name('uploads.store');
+
 });
 
 require __DIR__.'/auth.php';
