@@ -37,9 +37,13 @@
 </x-app-layout>
 
 <script>
+    // inputタグで選択されたファイル名を表示する
     function displayFileName(input) {
+        // inputタグのfilesプロパティの中にファイルの数が1個以上であればという条件式
         if (input.files.length > 0) {
+            // filesプロパティの最初のファイル（1番目）の「ファイル名(name)」を取得して fileName に格納する
             const fileName = input.files[0].name;
+            // idが 'selected-filename' の要素を取得し、その要素のテキストとして選択したファイル名を表示する
             document.getElementById('selected-filename').innerText = `選択されたファイル: ${fileName}`;
         }
     }

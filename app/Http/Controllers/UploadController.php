@@ -38,6 +38,6 @@ class UploadController extends Controller
         // Uploadモデルに登録
         $upload->save();
         // 登録が完了したら、create.blade.phpへ遷移
-        return redirect("/uploads/create");
+        return redirect("/dashboad");
     }
 }
